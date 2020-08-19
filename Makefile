@@ -9,6 +9,8 @@ VIM_PLUG := $(AUTOLOAD)/plug.vim
 BASE := $(abspath $(dir $(lastword $(MAKEFILE_LIST))))
 SRC  := $(BASE)/src
 
+COC_EXTENSIONS := $(shell paste -sd' ' $(SRC)/coc.extensions)
+
 PIP3 := $(shell command -v pip3 2> /dev/null)
 ifndef PIP3
 define MSG
@@ -89,8 +91,9 @@ ifdef NVIM
 	@echo '     exec ":source " . vimrc' >> $(NVIM_INIT)
 	@echo 'endif' >> $(NVIM_INIT)
 endif
-	@$(VIM) +PlugInstall +qall
+	@$(VIM) +PlugClean +PlugInstall +qall
 	@$(VIM) +GoInstallBinaries +qall
+	@$(VIM) '+CocInstall -sync $(COC_EXTENSIONS)' +qall
 
 $(VIM_DIR):
 	@mkdir -p $(VIM_DIR)
@@ -98,3 +101,7 @@ $(VIM_DIR):
 .PHONY: clean
 clean:
 	@rm -rf $(VIM_DIR) $(VIMRC) $(NVIM_INIT)
+
+.PHONY: plug-update
+plug-update:
+	@vim +PlugUpdate +qall

@@ -1,9 +1,6 @@
 "------------------------------------------------------------------------------
-" Plug 'Shougo/deoplete.vim'
+" Plug 'junegunn/goyo.vim'
 "------------------------------------------------------------------------------
-
- " Disable AutoComplPop.
- let g:acp_enableAtStartup = 0
-
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
+let g:goyo_width = "80%"
+let g:goyo_height = "100%"
+nnoremap <silent> zen :Goyo <CR>

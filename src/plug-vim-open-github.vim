@@ -1,9 +1,3 @@
 "------------------------------------------------------------------------------
-" Plug 'Shougo/deoplete.vim'
+" Plug 'k0kubun/vim-open-github'
 "------------------------------------------------------------------------------
-
- " Disable AutoComplPop.
- let g:acp_enableAtStartup = 0
-
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1

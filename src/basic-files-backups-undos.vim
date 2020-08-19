@@ -22,7 +22,7 @@ vmap <Leader>w <ESC><ESC>:w<CR>
 
 " :SudoW sudo saves the file
 " (useful for handling the permission-denied error)
-command SudoW w !sudo tee % > /dev/null
+silent! command SudoW w !sudo tee % > /dev/null
 
 " Turn backup off, since most stuff is in SVN, git et.c anyway...
 set nobackup
@@ -47,7 +47,7 @@ autocmd BufReadPost *
      \ endif
 
 " Remember info about open buffers on close
-set viminfo^=%
+" set viminfo^=%
 
 " Remove trailing spaces on save
 autocmd BufWritePre * :%s/\s\+$//e

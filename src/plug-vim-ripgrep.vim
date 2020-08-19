@@ -1,9 +1,8 @@
 "------------------------------------------------------------------------------
-" Plug 'Shougo/deoplete.vim'
+" Plug 'jremmen/vim-ripgrep'
 "------------------------------------------------------------------------------
+let g:rg_highlight = 1
+let g:rg_derive_root = 1
 
- " Disable AutoComplPop.
- let g:acp_enableAtStartup = 0
-
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
+nnoremap <silent> g* :Rg <CR>
+vnoremap <silent> g* :call RgVisual() <CR>

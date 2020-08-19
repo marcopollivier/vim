@@ -1,9 +1,4 @@
 "------------------------------------------------------------------------------
-" Plug 'Shougo/deoplete.vim'
+" Plug 'xolox/vim-colorscheme-switcher'
 "------------------------------------------------------------------------------
-
- " Disable AutoComplPop.
- let g:acp_enableAtStartup = 0
-
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
+let g:colorscheme_switcher_define_mappings=1

@@ -1,9 +1,6 @@
 "------------------------------------------------------------------------------
-" Plug 'Shougo/deoplete.vim'
+" Plug 'tpope/vim-fireplace'
 "------------------------------------------------------------------------------
-
- " Disable AutoComplPop.
- let g:acp_enableAtStartup = 0
-
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
+nmap rr :Require<cr>
+nmap ee :Eval<cr>
+nmap ii (>I<cr>

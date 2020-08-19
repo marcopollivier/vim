@@ -1,9 +1,5 @@
 "------------------------------------------------------------------------------
-" Plug 'Shougo/deoplete.vim'
+" Plug 'tpope/vim-fugitive'
 "------------------------------------------------------------------------------
 
- " Disable AutoComplPop.
- let g:acp_enableAtStartup = 0
-
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
+set diffopt+=vertical
